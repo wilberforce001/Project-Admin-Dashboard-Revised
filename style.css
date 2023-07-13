@@ -30,3 +30,76 @@ body {
     grid-template-rows: 0.6fr 4fr;
     grid-template-columns: 5rem 1fr 1fr 1fr;
 }
+
+.drawer {
+    background-color: var(--drawer-color);
+    width: 5rem;
+    position: fixed;
+    transition: var(--transition-drawer);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.drawer:hover {
+    width: var(--drawer-width);
+}
+
+.menuItem > h1 {
+    display: none;
+    margin-left: 2rem;
+}
+
+.drawer:hover > .menuItem > h1 {
+    display: flex;
+}
+
+.drawer:hover ~ .navbar,
+.drawer:hover ~ .content {
+    margin-left: calc(var(--drawer-width) - 5rem);
+}
+
+.menuItem {
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.menuItem > * {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.drawer > *:not(:first-child) > * {
+    padding: 1rem 0.5rem 0.5rem 1rem;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.drawer > *:not(:first-child) > object {
+    width: calc(20px + 0.5vw);
+    height: calc(20px + 0.5vw);
+}
+
+.drawer > div:nth-child(8) {
+    padding-top: 60px;
+}
+
+.dashboard {
+    font-size: clamp(12px, calc(25px + 0.9vw), 50px);
+}
+
+.dashboard object {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(40px + 0.7vw);
+    height: calc(40px + 0.7vw);
+    padding-left: 10px;
+    padding-top: 10px;
+
+}
