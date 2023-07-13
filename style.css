@@ -21,3 +21,12 @@
     --transition-notDrawer: margin-left 0.4s ease-in;
     --transition-drawer: width 0.4s ease-in;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "drawer nav nav nav" "drawer content content content";
+    grid-template-rows: 0.6fr 4fr;
+    grid-template-columns: 5rem 1fr 1fr 1fr;
+}
