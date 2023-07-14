@@ -90,6 +90,11 @@ a {
     padding-top: 60px;
 }
 
+.drawer > div:nth-child(1) {
+    padding-bottom: 15px;
+}
+
+
 .dashboard {
     font-size: clamp(12px, calc(25px + 0.9vw), 50px);
 }
@@ -102,6 +107,7 @@ a {
     height: calc(40px + 0.7vw);
     padding-left: 10px;
     padding-top: 10px;
+    fill: white;
 }
 
 /* Navbar Styling */
@@ -146,14 +152,21 @@ a {
 } 
 
 .account .gh-avatar {
-    margin: 0 1rem 0 0.25rem;
+    margin: 0 1rem 0 1rem;
     height: 40px;
     width: 40px;
 }
 
-object {
-    cursor: pointer;
+.account .name {
+    color: var(--text-primary);
+    font-weight: 800;
 }
+
+object {
+    cursor: pointer; 
+}
+
+
 
 .bottom {
     display: flex;
@@ -363,3 +376,4 @@ object {
     width: 40px;
     height: 40px;
 }
+
